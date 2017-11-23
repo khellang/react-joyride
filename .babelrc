@@ -15,30 +15,14 @@
   "env": {
     "production": {
       "plugins": [
+        "transform-react-remove-prop-types",
         "transform-flow-strip-types",
-        "array-includes"
+        "array-includes",
       ]
     },
     "commonjs": {
       "plugins": [
         ["transform-es2015-modules-commonjs", { "loose": true }]
-      ]
-    },
-    "standalone": {
-      "moduleId": "Joyride",
-      "plugins": [
-        "transform-flow-strip-types",
-        "array-includes",
-        [
-          "transform-es2015-modules-umd",
-          {
-            "globals": {
-              "react": "React",
-              "prop-types": "React.PropTypes"
-            },
-            "exactGlobals": true
-          }
-        ]
       ]
     },
     "test": {
