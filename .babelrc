@@ -24,6 +24,23 @@
         ["transform-es2015-modules-commonjs", { "loose": true }]
       ]
     },
+    "standalone": {
+      "moduleId": "Joyride",
+      "plugins": [
+        "transform-flow-strip-types",
+        "array-includes",
+        [
+          "transform-es2015-modules-umd",
+          {
+            "globals": {
+              "react": "React",
+              "prop-types": "React.PropTypes"
+            },
+            "exactGlobals": true
+          }
+        ]
+      ]
+    },
     "test": {
       "plugins": [
         "transform-es2015-modules-commonjs"
