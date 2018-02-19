@@ -111,7 +111,7 @@
     "build:es": "cross-env NODE_ENV=production babel src/scripts -d es",
     "build:css": "node-sass src/styles/react-joyride.scss -o dist/ && postcss dist/react-joyride.css --use autoprefixer -d lib/ && mv dist/react-joyride.css dist/react-joyride-compiled.css",
     "watch": "npm run build:commonjs -- -w",
-    "clean": "rimraf es && rimraf lib",
+    "clean": "rimraf es && rimraf lib && rimraf dist",
     "start": "node demo/config/webpack.server.js",
     "build:demo": "NODE_ENV=production webpack --config demo/config/webpack.build.js",
     "build:webpack": "webpack --config webpack.config.js",
