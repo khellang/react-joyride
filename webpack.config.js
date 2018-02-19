@@ -17,7 +17,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: 'bundle.js',
+    filename: 'react-joyride.bundle.js',
     library: "Joyride",
     libraryTarget: "umd",
     path: path.resolve(__dirname, 'dist')
